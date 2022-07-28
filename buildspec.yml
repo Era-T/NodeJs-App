@@ -8,8 +8,5 @@ phases:
   build:
       commands:
         - echo Build started on `date`
-artifacts:
-  files:
-    - C:\Users\erata\OneDrive\Desktop\Excersice\NodeJs-App.zip
- discard-paths: yes
+
  
