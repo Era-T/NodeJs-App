@@ -1,31 +1,12 @@
-version: 0.2
-
-#run-as: Linux-user-name
-
-env:
-  shell: shell-tag
-  variables:
-    key: "value"
+version: 0.2  
 
 
-        
 phases:
+  pre_build:
+    commands:
+    - npm install
   build:
       commands:
         - echo Build started on `date`
-        - npm install
-    post_build:
-      commands:
-        - echo Running post_build commands
-        - mkdir build-output
-        - cp -R C:/Users/erata/OneDrive/Desktop/Excersice/NodeJs-App/app.js build-output
-        - mkdir -p build-output/node_modules
-        - cp -R node_modules/* build-output/node_modules
-        - cd build-output/
-        - zip -qr build-output.zip ./*
-        - mv build-output.zip ../
-        - echo Build completed on `date`
-  artifacts:
-    files:
-      - build-output.zip
+        
  
