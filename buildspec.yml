@@ -10,6 +10,6 @@ phases:
         - echo Build started on `date`
 artifacts:
   files:
-    - nodejs-app/**/*
+    - app.js/**/*
  discard-paths: yes
  
